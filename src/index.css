@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+@font-face {
+  font-family: "ActOfRejection";
+  src: local("ActOfRejection"),
+    url("./assets/Font/Act_Of_Rejection.ttf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/Font/Inter/Inter-VariableFont_opsz\,wght.ttf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets/Font/Montserrat/static/Montserrat-ExtraBold.ttf")
+      format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets//Font/Montserrat/static/Montserrat-Bold.ttf")
+      format("opentype");
+  font-weight: 700;
+}

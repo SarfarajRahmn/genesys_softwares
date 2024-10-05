@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function NavbarWithDropdown() {
   const [dropDownState, setDropDownState] = useState(false);
   const dropDownMenuRef = useRef(null);
+  const items = ["Food", "Transport", "Management"];
 
   useEffect(() => {
     const closeDropDown = (e) => {
@@ -20,28 +21,25 @@ export default function NavbarWithDropdown() {
   }, []);
 
   return (
-    <nav className="px-4 ps-20 md:ps-28 md:pe-12 me-2 py-[13px] flex justify-between items-center flex-wrap">
-      <div className="font-semibold flex md:flex-row align-middle justify-center items-center space-y-4 space-x-6 md:space-y-0 md:space-x-4">
+    <nav className="bg-[#EA2127] px-12 md:px-[86px] pe-5 py-[13px] flex justify-between items-start flex-wrap ">
+      <div className="font-semibold flex md:flex-row align-middle justify-center items-center space-y-4 space-x-6 md:space-y-0 md:space-x-5">
         <img
           src="/src/assets/Logo/Valuetainment.svg"
-          className="max-h-[60px] md:max-h-[115px] max-w-[60px] md:max-w-[115px] lg:max-w-[65px] lg:max-h-[65px] object-contain filter invert"
+          className="max-h-[60px] md:max-h-[115px] max-w-[60px] md:max-w-[115px] lg:max-w-[70px] lg:max-h-[70px] object-contain filter invert"
           alt="Valuetainment logo"
         />
-        <p className="uppercase text-white font-extrabold text-[48px] md:text-[72px] lg:text-7xl tracking-widest">
+        <p className="font-[Montserrat] uppercase text-white font-extrabold text-[48px] md:text-[72px] lg:text-[81px] tracking-widest ">
           vtmerch
         </p>
       </div>
 
-      <ul className="flex items-center justify-between gap-4 text-slate-900 dark:text-gray-100 lg:gap-6">
+      <ul className="flex items-center justify-between mt-2 text-slate-900 dark:text-gray-100 lg:gap-6">
         <li className="relative" ref={dropDownMenuRef}>
           <button
-            onClick={() => setDropDownState(!dropDownState)}
+            onClick={() => setDropDownState((prev) => !prev)}
             className="relative flex items-center gap-1 py-2 hover:underline"
           >
-            <div
-              onClick={() => setDropDownState(!dropDownState)}
-              className="relative w-10 h-12 cursor-pointer flex items-center justify-center"
-            >
+            <div className="relative w-10 h-12 cursor-pointer flex items-center justify-center">
               <span
                 className={`block absolute h-[3px] w-7 bg-white transform transition-all duration-300 ease-in-out ${
                   dropDownState ? "rotate-45" : "-translate-y-2"
@@ -61,19 +59,25 @@ export default function NavbarWithDropdown() {
               ></span>
             </div>
           </button>
-          {dropDownState && (
-            <ul className="absolute top-16 -left-24 z-10 space-y-2 rounded-lg bg-red-500  p-2 text-gray-100">
-              <li className="px-3 py-1 hover:bg-red-800 duration-300 transition">
-                <button>Food</button>
+          <ul
+            className={`absolute top-16 -left-24 z-10 space-y-2 rounded-lg bg-red-500 p-2 text-gray-100 ${
+              dropDownState ? "visible opacity-100" : "invisible opacity-0"
+            } transition-opacity duration-300`}
+          >
+            {items.map((item, idx) => (
+              <li
+                key={idx}
+                className={`rounded-sm bg-red-400 p-2 hover:bg-red-800 transition duration-300 ${
+                  dropDownState
+                    ? "translate-x-0 opacity-100"
+                    : `translate-x-10 opacity-0`
+                }`}
+                style={{ transitionDelay: `${idx * 100}ms` }} // Delay for each item
+              >
+                <button>{item}</button>
               </li>
-              <li className="px-3 py-1 hover:bg-red-800 duration-300 transition">
-                <button>Transport</button>
-              </li>
-              <li className="px-3 py-1 hover:bg-red-800 duration-300 transition">
-                <button>Management</button>
-              </li>
-            </ul>
-          )}
+            ))}
+          </ul>
         </li>
       </ul>
     </nav>

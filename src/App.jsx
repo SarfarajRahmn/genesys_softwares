@@ -6,12 +6,12 @@ import Hero from "./components/Hero";
 const App = () => {
   return (
     <div>
-      <div className="bg-[#EA2127]">
-        <Topnav />
+      <Topnav />
+      <div className="min-h-[88rem] overflow-y-scroll">
         <Hero />
+        App
+        <Footer />
       </div>
-      App
-      <Footer />
     </div>
   );
 };
