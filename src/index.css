@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 1px;
 }
 
 @font-face {
@@ -16,7 +16,8 @@
 @font-face {
   font-family: "Inter";
   src: local("Inter"),
-    url("./assets/Font/Inter/Inter-VariableFont_opsz\,wght.ttf") format("opentype");
+    url("./assets/Font/Inter/Inter-VariableFont_opsz\,wght.ttf")
+      format("opentype");
   font-weight: normal;
 }
 
@@ -29,9 +30,23 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
+  font-family: "Montserrat-medium";
+  src: local("Montserrat-medium"),
+    url("./assets//Font/Montserrat/static/Montserrat-Medium.ttf")
+      format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat-bold";
+  src: local("Montserrat-bold"),
     url("./assets//Font/Montserrat/static/Montserrat-Bold.ttf")
       format("opentype");
   font-weight: 700;
+}
+
+.textShadow {
+  text-shadow: 1px 1px 0 #000000ad, -1px -1px 0 #000000ad, 1px -1px 0 #000000ad,
+    -1px 1px 0 #000000ad, 0 1px 0 #000000ad, 1px 0 0 #000000ad,
+    0 -1px 0 #000000ad, -1px 0 0 #000000ad;
 }

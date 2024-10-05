@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlider, setCurrentSlider] = useState(0);
 
-  const cardItems = [
+  const sliders = [
     {
       image: "/src/assets/img/img (9).png",
       title: "Army Green Active Short Sleeve",
@@ -42,18 +42,19 @@ const Hero = () => {
     },
   ];
 
-  const totalItems = cardItems.length;
-  const itemsPerView = 5;
+  const itemsPerView = 5; 
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? totalItems - itemsPerView : prevIndex - 1
+  
+  const prevSlider = () => {
+    setCurrentSlider((currentSlider) =>
+      currentSlider === 0 ? sliders.length - itemsPerView : currentSlider - 1
     );
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === totalItems - itemsPerView ? 0 : prevIndex + 1
+  
+  const nextSlider = () => {
+    setCurrentSlider((currentSlider) =>
+      currentSlider === sliders.length - itemsPerView ? 0 : currentSlider + 1
     );
   };
 
@@ -64,19 +65,17 @@ const Hero = () => {
       </p>
 
       <div className="absolute top-[138px] left-[133px] group">
-        {" "}
-        {/* Added group for hover */}
         <div className="max-w-[1200px] space-y-2 rounded-lg">
           <div className="relative overflow-hidden">
             <div
               className="flex transition-transform duration-500"
               style={{
                 transform: `translateX(-${
-                  currentIndex * (100 / itemsPerView)
+                  currentSlider * (100 / itemsPerView)
                 }%)`,
               }}
             >
-              {cardItems.map((item, idx) => (
+              {sliders.map((item, idx) => (
                 <div
                   key={idx}
                   className="min-w-[20%] flex-shrink-0 space-y-2 px-2 rounded-lg"
@@ -87,7 +86,7 @@ const Hero = () => {
                     alt={item.title}
                   />
                   <div className="grid gap-1 text-white opacity-80 font-[Inter] ps-2">
-                    <p className="text-[16px] lg:text-xs ">{item.title}</p>
+                    <p className="text-[16px] lg:text-xs">{item.title}</p>
                     <div className="text-[14px] font-normal flex justify-start space-x-4 items-center">
                       <p>{item.price}</p>
                       <p className="line-through">{item.originalPrice}</p>
@@ -98,15 +97,17 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+       
           <button
-            onClick={handlePrev}
+            onClick={prevSlider}
             className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             &#10094;
           </button>
+
+   
           <button
-            onClick={handleNext}
+            onClick={nextSlider}
             className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             &#10095;
