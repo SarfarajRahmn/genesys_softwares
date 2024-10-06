@@ -1,4 +1,9 @@
 import React from "react";
+import quotes from "../assets/Icon/quotes.svg";
+import img5 from "../assets/img/img (5).png";
+import img8 from "../assets/img/img (8).png";
+import choose from "../assets/img/Choose-Your-Enemies.png";
+import pat from "../assets/img/pat-signature White 1.png";
 
 const BooksSection = () => {
   return (
@@ -29,19 +34,19 @@ const BooksSection = () => {
             </svg>
           </button>
           <img
-            src="/src/assets/img/pat-signature White 1.png"
+            src={pat}
             alt="pat signature"
             className="lg:max-h-[200px] lg:max-w-[520px]"
           />
         </div>
         <div className="flex justify-center items-center space-x-6">
           <img
-            src="/src/assets/img/Choose-Your-Enemies.png"
+            src={choose}
             className="lg:max-h-[420px] lg:max-w-[588px]"
             alt="choose your enemies"
           />
           <img
-            src="/src/assets/img/img (8).png"
+            src={img8}
             className="lg:max-h-[370px] lg:max-w-[588px]"
             alt="Your Next Four Moves"
           />
@@ -51,7 +56,7 @@ const BooksSection = () => {
       <div className="lg:min-h-[24rem] relative bg-gradient-to-r from-[#EC3339] to-[#BB1117] ">
         <div className="">
           <img
-            src="/src/assets/Icon/quotes.svg"
+            src={quotes}
             className="max-w-[160px] max-h-[160px] opacity-85 absolute top-7 left-16"
             alt=""
           />
@@ -63,7 +68,7 @@ const BooksSection = () => {
         </div>
         <div className="absolute right-20 -top-[86px]">
           <img
-            src="/src/assets/img/img (5).png"
+            src={img5}
             className="lg:max-h-[470px] lg:max-w-full "
             alt="choose your enemies"
           />

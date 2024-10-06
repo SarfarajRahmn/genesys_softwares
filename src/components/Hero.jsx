@@ -1,57 +1,58 @@
 import React, { useState } from "react";
+import img9 from "../assets/img/img (9).png";
+import img10 from "../assets/img/img (10).png";
+import img11 from "../assets/img/img (11).png";
 
 const Hero = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
 
   const sliders = [
     {
-      image: "/src/assets/img/img (9).png",
+      image: img9,
       title: "Army Green Active Short Sleeve",
       price: "$ 34.50",
       originalPrice: "$ 34.50",
     },
     {
-      image: "/src/assets/img/img (10).png",
+      image: img10,
       title: "Black Hoodie Jacket",
       price: "$ 45.00",
       originalPrice: "$ 55.00",
     },
     {
-      image: "/src/assets/img/img (11).png",
-      title: "Red Sports Bra",
+      image: img11,
+      title: "Red Sports shirt",
       price: "$ 25.00",
       originalPrice: "$ 30.00",
     },
     {
-      image: "/src/assets/img/img (11).jpeg",
+      image: img9,
       title: "Blue Jogger Pants",
       price: "$ 40.00",
       originalPrice: "$ 50.00",
     },
     {
-      image: "/src/assets/img/img (9).png",
+      image: img10,
       title: "Grey T-Shirt",
       price: "$ 20.00",
       originalPrice: "$ 25.00",
     },
     {
-      image: "/src/assets/img/img (10).png",
+      image: img11,
       title: "Yellow Jacket",
       price: "$ 70.00",
       originalPrice: "$ 80.00",
     },
   ];
 
-  const itemsPerView = 5; 
+  const itemsPerView = 5;
 
-  
   const prevSlider = () => {
     setCurrentSlider((currentSlider) =>
       currentSlider === 0 ? sliders.length - itemsPerView : currentSlider - 1
     );
   };
 
-  
   const nextSlider = () => {
     setCurrentSlider((currentSlider) =>
       currentSlider === sliders.length - itemsPerView ? 0 : currentSlider + 1
@@ -61,7 +62,7 @@ const Hero = () => {
   return (
     <div className="bg-[#EA2127] lg:min-h-[33rem] md:pt-12 pt-8 ps-28 relative">
       <p className="text-[#ffffff] opacity-40 font-[ActOfRejection] lg:text-[102px] font-normal">
-        future looks brights!
+        future looks bright!
       </p>
 
       <div className="absolute top-[138px] left-[133px] group">
@@ -82,7 +83,7 @@ const Hero = () => {
                 >
                   <img
                     className="h-[397px] lg:max-h-[278px] lg:max-w-[250px] w-[357px] rounded-lg object-cover"
-                    src={item.image}
+                    src={item.image} // Access the image URL directly
                     alt={item.title}
                   />
                   <div className="grid gap-1 text-white opacity-80 font-[Inter] ps-2">
@@ -97,7 +98,6 @@ const Hero = () => {
             </div>
           </div>
 
-       
           <button
             onClick={prevSlider}
             className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -105,7 +105,6 @@ const Hero = () => {
             &#10094;
           </button>
 
-   
           <button
             onClick={nextSlider}
             className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"

@@ -1,31 +1,35 @@
 import React from "react";
+import img4 from "../assets/img/img (4).jpeg";
+import img7 from "../assets/img/img (7).jpeg";
 
+import img6 from "../assets/img/img (6).jpeg";
+import img10 from "../assets/img/img (10).jpeg";
 const Caps = () => {
   const products = [
     {
       id: 1,
-      image: "/src/assets/img/img (4).jpeg",
+      image: img4,
       title: "Army Green Active Short Sleeve",
       price: "$34.95",
       originalPrice: "$36.99",
     },
     {
       id: 2,
-      image: "/src/assets/img/img (7).jpeg",
+      image: img7,
       title: "Army Green Active Short Sleeve",
       price: "$45.00",
       originalPrice: "$55.00",
     },
     {
       id: 3,
-      image: "/src/assets/img/img (6).jpeg",
+      image: img6,
       title: "Army Green Active Short Sleeve",
       price: "$25.00",
       originalPrice: "$30.00",
     },
     {
       id: 4,
-      image: "/src/assets/img/img (10).jpeg",
+      image: img10,
       title: "Army Green Active Short Sleeve",
       price: "$40.00",
       originalPrice: "$50.00",
