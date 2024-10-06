@@ -37,7 +37,7 @@ const Caps = () => {
       <p className="uppercase text-5xl font-[Montserrat-bold] leading-tight font-bold">
         Buy 1 get 1 free <br />
         On{" "}
-        <span className="relative textShadow whitespace-break-spaces tracking-wide font-normal text-white subpixel-antialiased font-[Montserrat-medium]">
+        <span className=" textShadow whitespace-break-spaces tracking-wide font-normal text-white subpixel-antialiased font-[Montserrat-medium]">
           Best Selling Products
         </span>
       </p>

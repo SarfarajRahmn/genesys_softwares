@@ -7,9 +7,9 @@ import BooksSection from "./components/BooksSection";
 
 const App = () => {
   return (
-    <div>
+    <div className="overflow-hidden h-screen">
       <Topnav />
-      <div className="min-h-[88rem] overflow-y-scroll">
+      <div className="max-h-[32rem] overflow-y-scroll">
         <Hero />
         <Caps />
         <BooksSection />
