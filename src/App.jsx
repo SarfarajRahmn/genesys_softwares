@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="overflow-hidden h-screen">
       <Topnav />
-      <div className="max-h-[32rem] overflow-y-scroll">
+      <div className="max-h-[43rem] lg:max-h-[32rem]  overflow-y-scroll">
         <Hero />
         <Caps />
         <BooksSection />

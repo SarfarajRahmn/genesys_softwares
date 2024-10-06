@@ -10,9 +10,9 @@ const BooksSection = () => {
     <>
       <div className="lg:min-h-[33rem] md:py-20 py-8 bg-[#111111] flex justify-center items-center space-x-6">
         <div className="me-8">
-          <p className="uppercase text-[36px] font-[Montserrat-bold] text-white leading-loose font-light">
+          <p className="uppercase lg:text-[36px] font-[Montserrat-bold] text-white leading-loose font-light">
             Patrick Bet-David's <br />
-            <span className=" text-5xl tracking-wide font-extrabold text-red-500 subpixel-antialiased font-[Montserrat-medium]">
+            <span className=" lg:text-5xl tracking-wide font-extrabold text-red-500 subpixel-antialiased font-[Montserrat-medium]">
               Signed <br /> Collection
             </span>
           </p>{" "}
@@ -39,7 +39,7 @@ const BooksSection = () => {
             className="lg:max-h-[200px] lg:max-w-[520px]"
           />
         </div>
-        <div className="flex justify-center items-center space-x-6">
+        <div className="flex justify-center items-center lg:space-x-6">
           <img
             src={choose}
             className="lg:max-h-[420px] lg:max-w-[588px]"
@@ -60,7 +60,7 @@ const BooksSection = () => {
             className="max-w-[160px] max-h-[160px] opacity-85 absolute top-7 left-16"
             alt=""
           />
-          <p className="uppercase text-[34px] font-[Montserrat-bold] text-white leading-relaxed font-light absolute top-[130px] left-[108px]">
+          <p className="uppercase lg:text-[34px] font-[Montserrat-bold] text-white leading-relaxed font-light absolute top-[130px] left-[108px]">
             Our mission is to enlighten, entertain <br />
             and empower current and future <br />
             leaders around the world.

@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-12 pb-6 px-6 md:px-16 lg:px-28">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center lg:flex-row lg:items-center  lg:border-b-2 border-gray-700 w-full lg:w-[75%] h-32 space-y-4 lg:space-y-0 lg:space-x-4">
+        <div className="flex flex-col items-center lg:flex-row lg:items-center  lg:border-b-2 border-gray-700 w-full lg:w-[81%] h-32 space-y-4 lg:space-y-0 lg:space-x-4">
           <img
             src={logo}
             alt="Logo"
@@ -33,13 +33,13 @@ const Footer = () => {
               Subscribe and be the first to receive notifications about our
               upcoming releases and the latest news.
             </p>
-            <div className="mt-4 flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
+            <div className="mt-4 flex flex-col space-y-4 pe-16">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full lg:w-auto px-4 py-1 rounded-lg bg-transparent text-white placeholder:text-xs placeholder:text-center focus:outline-none border-white border"
+                className="px-4 py-1 rounded-lg bg-transparent text-white placeholder:text-xs placeholder:text-center focus:outline-none border-white border"
               />
-              <button className="w-full lg:w-auto bg-white text-xs text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition duration-300">
+              <button className="bg-white text-xs text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition duration-300">
                 Subscribe
               </button>
             </div>

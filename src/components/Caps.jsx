@@ -38,7 +38,7 @@ const Caps = () => {
 
   return (
     <div className="lg:min-h-[33rem] md:py-20 py-8 px-28 bg-[#F6F5F5]">
-      <p className="uppercase text-5xl font-[Montserrat-bold] leading-tight font-bold">
+      <p className="uppercase text-5xl font-[Montserrat-bold] leading-tight font-bold mb-8">
         Buy 1 get 1 free <br />
         On{" "}
         <span className=" textShadow whitespace-break-spaces tracking-wide font-normal text-white subpixel-antialiased font-[Montserrat-medium]">
