@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-12 pb-6 px-6 md:px-16 lg:px-28">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center lg:flex-row lg:items-center lg:border-b-2 border-gray-700 w-full lg:w-[75%] space-y-4 lg:space-y-0 lg:space-x-4">
+        <div className="flex flex-col items-center lg:flex-row lg:items-center  lg:border-b-2 border-gray-700 w-full lg:w-[75%] h-32 space-y-4 lg:space-y-0 lg:space-x-4">
           <img
             src={logo}
             alt="Logo"
@@ -28,7 +28,6 @@ const Footer = () => {
           </h2>
         </div>
         <div className="grid gap-8 items-start mt-10 lg:grid-cols-5">
-          ++{" "}
           <div className="lg:col-span-2 text-center lg:text-left">
             <p className="opacity-80 max-w-sm lg:max-w-[364px] mx-auto lg:mx-0 leading-tight font-[Montserrat-medium]">
               Subscribe and be the first to receive notifications about our
