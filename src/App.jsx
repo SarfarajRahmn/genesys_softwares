@@ -13,7 +13,6 @@ const App = () => {
         <Hero />
         <Caps />
         <BooksSection />
-        App
         <Footer />
       </div>
     </div>

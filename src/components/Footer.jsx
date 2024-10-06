@@ -2,56 +2,201 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col text-black">
-      <div className="flex flex-col items-center justify-around gap-5 bg-gray-300 py-8 dark:bg-gray-500 dark:text-white md:flex-row md:gap-0">
-        <h5 className="text-2xl font-bold">NavigateUI</h5>
-        <nav className="text-lg">
-          <ul className=" flex h-full items-center justify-center gap-5">
-            <li className="cursor-pointer">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                </svg>
-              </a>
-            </li>
-            <li className="cursor-pointer">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                </svg>
-              </a>
-            </li>
-            <li className="cursor-pointer">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <footer className="bg-black  text-white pt-12 pb-6 px-28 ">
+      <div className=" mx-auto">
+        <div className="flex items-center border-b-2 border-gray-700  w-[75%] space-x-4">
+          <img
+            src="/src/assets/Logo/Valuetainment.svg"
+            alt="Logo"
+            className="mx-auto lg:mx-0 mb-4 filter-red opacity-70"
+            width="60"
+          />
+          <h2 className="text-7xl text-white font-bold mb-4 font-[Montserrat] tracking-wider ">
+            VTMERCH
+          </h2>
+        </div>
+        <div className="grid lg:grid-cols-5 gap-8 items-start mt-10">
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <p className="opacity-80 max-w-[364px] leading-tight font-[Montserrat-medium]">
+              Subscribe and be the first to receive notifications about our
+              upcoming releases and the latest news.
+            </p>
+            <div className="mt-4 flex flex-col space-y-4 pe-16">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-1 rounded-lg bg-transparent text-white placeholder:text-xs placeholder:text-center focus:outline-none border-white border"
+              />
+              <button className="bg-white text-xs text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 lg:col-span-3 gap-8 text-center font-[Inter] lg:text-left">
+            <div>
+              <p className="font-semibold text-sm mb-4">Customer Services</p>
+              <ul className="space-y-3 text-xs text-gray-300 opacity-75">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Search
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Refund Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Track Order
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-sm mb-4">Products</p>
+              <ul className="space-y-3 text-xs text-gray-300 opacity-75">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Featured products
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Bestseller
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Latest product
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    All collections
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    All products
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-sm mb-4">Contact Us</p>
+              <p className="text-xs text-gray-300 opacity-75 mb-4">
+                Available between 8AM to 8PM. Ready to answer your questions.
+              </p>
+              <p className="text-xs opacity-75 text-gray-300 flex items-center space-x-2">
+                <img
+                  src="/src/assets/Icon/phone.png"
+                  className="w-[14px] h-[14px]"
+                  alt=""
+                />
+                <span>013456789</span>
+              </p>
+              <p className="text-xs opacity-75 text-gray-300 flex items-center space-x-2 mt-2">
+                <img
+                  src="/src/assets/Icon/mail.png"
+                  className="w-4 h-3"
+                  alt=""
+                />
+                <span>store@valuetainment.com</span>
+              </p>
+
+              <div className="flex items-center space-x-2 mt-4">
+                <img
+                  src="/src/assets/Icon/facebook (4).svg"
+                  className="w-4 h-4"
+                  alt=""
+                />
+                <img
+                  src="/src/assets/Icon/twitter (4).svg"
+                  className="w-4 h-4"
+                  alt=""
+                />
+                <img
+                  src="/src/assets/Icon/linkedin (3).svg"
+                  className="w-4 h-4"
+                  alt=""
+                />{" "}
+                <img
+                  src="/src/assets/Icon/instagram-logo (1).svg"
+                  className="w-4 h-4"
+                  alt=""
+                />
+              </div>
+              <div className="flex space-x-4 mt-4">
+                <a href="#" className="text-gray-300 hover:text-white">
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside className="py-6 flex justify-between text-xs text-gray-400 ">
+          <p>&copy; 2024 Valluetainment Store. All Rights Reserved.</p>
+
+          <span className="flex justify-center items-center space-x-2 ">
+            <img src="/src/assets/Icon/visa 1.svg" alt="" className="max-w-5" />
+            <img
+              src="/src/assets/Icon/apple-pay 1.svg"
+              alt=""
+              className="max-w-5"
+            />
+            <img
+              src="/src/assets/Icon/diners-club 1.svg"
+              alt=""
+              className="max-w-5"
+            />{" "}
+            <img src="/src/assets/Icon/visa 1.svg" alt="" className="max-w-5" />
+            <img src="/src/assets/Icon/amex 1.svg" alt="" className="max-w-5" />
+            <img
+              src="/src/assets/Icon/paypal 1.svg"
+              alt=""
+              className="max-w-5"
+            />
+            <img
+              src="/src/assets/Icon/american-express (1) 1.svg"
+              alt=""
+              className="max-w-5"
+            />
+          </span>
+        </aside>
       </div>
-      <aside className="bg-gray-500 py-5 text-center text-sm text-white dark:bg-gray-800">
-        <p>&copy; 2024 NavigateUI. All Rights Reserved.</p>
-      </aside>
     </footer>
   );
 };

@@ -50,3 +50,8 @@
     -1px 1px 0 #000000ad, 0 1px 0 #000000ad, 1px 0 0 #000000ad,
     0 -1px 0 #000000ad, -1px 0 0 #000000ad;
 }
+
+.filter-red {
+  filter: invert(29%) sepia(86%) saturate(4475%) hue-rotate(349deg)
+    brightness(98%) contrast(113%);
+}
